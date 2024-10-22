@@ -1,0 +1,2201 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="unicode-and-javascript/, 前端 JS HTML CSS Linux">
+    <meta name="description" content="Looking up cases and codes occasionally is convenient, as it allows you to document your experiences and knowledge, enabling you to share and teach others. This process is akin to reviewing the knowledge and acquiring a more profound comprehension of it">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>unicode-and-javascript/ | Alan Work&#39;s Notes</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Alan Work&#39;s Notes</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Alan Work&#39;s Notes</div>
+        <div class="logo-desc">
+            
+            Looking up cases and codes occasionally is convenient, as it allows you to document your experiences and knowledge, enabling you to share and teach others. This process is akin to reviewing the knowledge and acquiring a more profound comprehension of it
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">unicode-and-javascript/</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JS/">
+                                <span class="chip bg-color">JS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-10-22
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-10-22
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    30 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="ES5-中的字符操作"><a href="#ES5-中的字符操作" class="headerlink" title="ES5 中的字符操作"></a>ES5 中的字符操作</h1><p>es5 中提供了一些跟字符相关的操作，在某些需要精细化处理字符串的场所可能有帮助。</p>
+<h2 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a><a href="#%E5%AD%97%E7%AC%A6%E8%BD%AC%E4%B9%89" title="字符转义"></a>字符转义</h2><p>可以使用<code>\u</code>来转义各种十六进制数为相应字符：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#96;&#96;&#96;</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>&#96;&#96;&#96;</td>
+<td>&#96;&#96;&#96;</td>
+</tr>
+<tr>
+<td>‘\u0041’; &#x2F;&#x2F; A</td>
+<td></td>
+</tr>
+<tr>
+<td>‘\u0061’; &#x2F;&#x2F; a</td>
+<td></td>
+</tr>
+<tr>
+<td>‘\u4E25’; &#x2F;&#x2F; 严</td>
+<td></td>
+</tr>
+<tr>
+<td>‘\u2603’; &#x2F;&#x2F; ☃</td>
+<td></td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-|" data-language="|"><code class="language-|">
+## [](#fromCharCode、charCodeAt、charAt、length &quot;fromCharCode、charCodeAt、charAt、length&quot;)fromCharCode、charCodeAt、charAt、length
+
+1. &#96;String.fromCharcode&#96; - 可以基于『代码点』创建字符串，暂时可以把『代码点』理解为就是一串十六进制数
+
+   |             |                                                                             |
+   | ----------- | --------------------------------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   2
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   String.fromCharCode(0x0041); &#x2F;&#x2F; A
+   String.fromCharCode(0x4e25); &#x2F;&#x2F; 严
+   &#96;&#96;&#96; |
+
+2. &#96;String.prototype.charAt(position)&#96; 获取字符串在特定位置的字符
+
+   |             |                                                       |
+   | ----------- | ----------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   2
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#39;ABCDE&#39;.charAt(2); &#x2F;&#x2F; C
+   &#39;万几皮&#39;.charAt(2); &#x2F;&#x2F; 皮
+   &#96;&#96;&#96; |
+
+3. &#96;String.prototype.charCodeAt(position)&#96;，与&#96;charAt&#96;类似，只不过是获取在特定位置的那个字符的『代码点』。同时可以很容易看出来这个方法是&#96;fromCharCode&#96;的反向操作。
+
+   |                   |                                                                                                                                                               |
+   | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   2
+   3
+   4
+   5
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#39;ABCDE&#39;.charCodeAt(2).toString(16); &#x2F;&#x2F; 0x0043
+   &#39;万几皮&#39;.charCodeAt(2).toString(16); &#x2F;&#x2F; 0x76AE
+
+   &#x2F;&#x2F; 验证反向操作
+   String.fromCharCode(&#39;万几皮&#39;.charCodeAt(2)); &#x2F;&#x2F; &quot;皮&quot;
+   &#96;&#96;&#96; |
+
+4. &#96;length&#96;属性很熟悉了，就是计算长度呗
+
+   |             |                                                 |
+   | ----------- | ----------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   2
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#39;ABCDE&#39;.length; &#x2F;&#x2F; 5
+   &#39;万几皮&#39;.length; &#x2F;&#x2F; 3
+   &#96;&#96;&#96; |
+
+# [](#遇到-Unicode-字符时遇到的问题 &quot;遇到 Unicode 字符时遇到的问题&quot;)遇到 Unicode 字符时遇到的问题
+
+到目前为准都没什么问题，配合&#96;String.prototype&#96;上的各种工具方法，可以处理各种各样常见字符串操作。不过随着&#96;emoji&#96;表情的盛行，慢慢就会发现已有的工具出现各种各样的问题。
+
+## [](#fromCharCode、charCodeAt-的反向操作 &quot;fromCharCode、charCodeAt 的反向操作&quot;)fromCharCode、charCodeAt 的反向操作
+
+先看看上面的反向操作还能不能工作：
+
+|           |                                                         |
+| --------- | ------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+String.fromCharCode(&#39;💩&#39;.charCodeAt(0)); &#x2F;&#x2F; &quot;�&quot;
+&#96;&#96;&#96; |
+
+结果是乱码？？？
+
+那么再看看&#96;length&#96;：
+
+|           |                           |
+| --------- | ------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#39;💩&#39;.length; &#x2F;&#x2F; 2
+&#96;&#96;&#96; |
+
+因吹丝停，看来遇到了一些奇怪的问题，如果继续尝试，可以发现一些其他的『BUG』：
+
+## [](#翻转字符串 &quot;翻转字符串&quot;)翻转字符串
+
+翻转字符串可能是一个比较常见的字符串操作，通常可能有一个如下的工具函数：
+
+|                           |                                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+4
+5
+6
+7
+8
+9
+&#96;&#96;&#96; | &#96;&#96;&#96;
+function reverse(str) &#123;
+  return str
+    .split(&#39;&#39;)
+    .reverse()
+    .join(&#39;&#39;);
+&#125;
+
+reverse(&#39;abc&#39;); &#x2F;&#x2F; &#39;cba&#39;
+reverse(&#39;万几皮&#39;); &#x2F;&#x2F; &quot;皮几万&quot;
+&#96;&#96;&#96; |
+
+如果用来操作表情呢？
+
+|             |                                |
+| ----------- | ------------------------------ |
+| &#96;&#96;&#96;
+1
+2
+&#96;&#96;&#96; | &#96;&#96;&#96;
+reverse(&#39;💩&#39;);
+(&#39;��&#39;);
+&#96;&#96;&#96; |
+
+感觉好像表情被拆散成了 2 个奇怪的字符。
+
+在正则匹配时，也有奇怪的事情发生
+
+## [](#正则匹配 &quot;正则匹配&quot;)正则匹配
+
+### [](#范围匹配 &quot;范围匹配&quot;)范围匹配
+
+正则表达式中经常会用到范围匹配：
+
+|             |                                                             |
+| ----------- | ----------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;[a-c]&#x2F;.test(&#39;a&#39;) &#x2F;&#x2F; true
+&#x2F;[我-皮]&#x2F;.test(&#39;皮&#39;) &#x2F;&#x2F; true
+&#96;&#96;&#96; |
+
+但是这种方法在遇到表情时可能会出问题：
+
+|             |                                                                                                                          |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------ |
+| &#96;&#96;&#96;
+1
+2
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;[💩-💫]&#x2F;;
+&#x2F;&#x2F; Uncaught SyntaxError: Invalid regular expression: &#x2F;[💩-💫]&#x2F;: Range out of order in character class
+&#96;&#96;&#96; |
+
+囧，竟然直接就报错了。。
+
+### [](#数量匹配 &quot;数量匹配&quot;)数量匹配
+
+正则中可以用一些量词来匹配某个选项多次,如&#96;*&#96;,&#96;+&#96;, &#96;?&#96;, &#96;&#123;n&#125;&#96;, &#96;&#123;n,&#125;&#96;, &#96;&#123;n,m&#125;&#96;，这些在处理『常见普通』字符时没问题：
+
+|             |                                                           |
+| ----------- | --------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;a&#123;2&#125;&#x2F;.test(&#39;aa&#39;) &#x2F;&#x2F;true
+&#x2F;皮&#123;2&#125;&#x2F;.test(&#39;皮皮&#39;) &#x2F;&#x2F;true
+&#96;&#96;&#96; |
+
+不出意料，遇到表情也会出问题：
+
+|           |                                        |
+| --------- | -------------------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;💩&#123;2&#125;&#x2F;.test(&#39;💩💩&#39;); &#x2F;&#x2F; false
+&#96;&#96;&#96; |
+
+种种奇怪的现象都表明，js 在处理 emoji 时有问题，而这种现象在普通英文字母和汉字上不会存在，而脑海里跟 emoji 最相关的就是 Unicode 了，看来有必要了解下 Unicode。那 Unicode 到底是个啥？
+
+# [](#Unicode-简介 &quot;Unicode 简介&quot;)Unicode 简介
+
+Unicode 是一个字符集（注意不是编码方式，时不时听到有人说 Unicode 编码，实际上是不正确的说法），它把目前世界上所有字符包含在内了。每个符号都与一个称为代码点（&#96;Code Point&#96;）的十六进制数对应，代码点通常有一个&#96;U+&#96;前缀，例如：
+
+|               |                                                  |
+| ------------- | ------------------------------------------------ |
+| &#96;&#96;&#96;
+1
+2
+3
+&#96;&#96;&#96; | &#96;&#96;&#96;
+U+0041 &#x3D;&gt;  A
+U+0061 &#x3D;&gt;   a
+U+2603 &#x3D;&gt;   ☃
+&#96;&#96;&#96; |
+
+[codepoints](https:&#x2F;&#x2F;codepoints.net&#x2F;)上可以浏览各种各样的 Unicode 字符，我们 💩 先生的代码点是&#96;U+1F4A9&#96;\~\~\~
+
+Code Point 的取值范围是&#96;U+0000&#96;\~&#96;U+10FFFF&#96;，大约有 110 万个。 为了好组织，所有&#96;Code Point&#96;被分为了 17 个&#96;Plane&#96;，每个&#96;Plane&#96;中大约包含 65K 个&#96;Code Point&#96;。 见[维基百科](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Unicode)
+
+[![](https:&#x2F;&#x2F;hellogithub2014.github.io&#x2F;images&#x2F;Unicode&#x2F;Unicode-Panel.png)](https:&#x2F;&#x2F;hellogithub2014.github.io&#x2F;images&#x2F;Unicode&#x2F;Unicode-Panel.png)
+
+其中第一个&#96;Plane&#96;（U+0000\~ U+FFFF）被称为&#96;BMP&#96;（&#96;Basic Multilingual Plane&#96;）,包含了几乎所有的常用字符。
+
+剩下的其他&#96;Plane&#96;（U+10000\~ U+10FFFF）被称为&#96;supplementary planes（SMP）&#96;或者 &#96;astral planes&#96;，对应的字符通常称为&#96;SMP字符&#96;。
+
+另： 汉字的 Unicode 码点范围[可以参照这里](http:&#x2F;&#x2F;www.qqxiuzi.cn&#x2F;zh&#x2F;hanzi-unicode-bianma.php)
+
+关于 Unicode 先介绍这么多，我们关心的是，这个跟上面遇到的那些 BUG 有什么关系呢？这就要从 js 内部对字符的表示说起了。
+
+# [](#js-内部的字符表示 &quot;js 内部的字符表示&quot;)js 内部的字符表示
+
+上面说到 Unicode 只是字符集，在计算机内部不会直接存储字符集中的字符，而是会通过某种编码把它转换为一个个字节。对于大部分常见的字符，都是用 2 个字节表示的；而对于 emoji 表情，可能有人已经猜到了，是用 4 个字节表示的。
+
+更具体的来说： 对于&#96;SMP字符&#96;，JavaScript 实际上把它拆成了上下两半（&#96;H&#96;、&#96;L&#96;）分别来表示，&#96;H&#96; 和 &#96;L&#96;都是 2 个字节的。
+
+H、L 的计算公式：
+
+|             |                                                                                               |
+| ----------- | --------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+&#96;&#96;&#96; | &#96;&#96;&#96;
+H &#x3D; Math.floor((C - 0x10000) &#x2F; 0x400) + 0xd800;
+L &#x3D; ((C - 0x10000) % 0x400) + 0xdc00;
+&#96;&#96;&#96; |
+
+因为 &#96;SMP字符&#96; 的范围是&#96;U+010000 → U+10FFFF&#96;，故
+
+&#96;H&#96;的范围就是 &#96;0xD800&#96;\~&#96;0xDBFF&#96;， 一共 2^10 个字符\
+&#96;L&#96;的范围就是 &#96;0xDC00&#96; \~ &#96;0xDFFF&#96;，一共 2^10 个字符
+
+貌似很巧合的是：因为&#96;SMP字符&#96;的范围是&#96;U+10000&#96;\~&#96;U+10FFFF&#96;,一共 2^20 个字符，所以 H 和 L 结合起来，正巧能表示全部的&#96;SMP字符&#96;。而 BMP 中&#96;U+D800&#96;到&#96;U+DFFF&#96;是一个空段，里面不对应任何字符。
+
+例如对于”💩”(0x1F4A9)，通过上面公式计算可以得到&#96;H &#x3D; 0xD83D&#96;、&#96;L &#x3D; 0xDCA9&#96;，也就是说 js 内部会使用&#96;0xD83D&#96;和&#96;0xDCA9&#96;一共 4 个字节来表示它。
+
+同时，对于 BMP 区间的代码点，js 中会直接将码点转为十六进制形式的 2 字节：
+
+|           |                           |
+| --------- | ------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+U+4E25  &#x3D;&gt; 0x4E25
+&#96;&#96;&#96; |
+
+我们上面碰到的所有&#96;SMP字符&#96;BUG 都是因为 H、L 导致，理解了这个也就知道该如何解决了。 不过在想办法解决它之前，我们来正面回答一下，**js 内部是使用什么编码方式处理字符的？**
+
+## [](#js-中的字符编码 &quot;js 中的字符编码&quot;)js 中的字符编码
+
+好吧，这块的知识是从[阮老师的这篇博客](http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;blog&#x2F;2014&#x2F;12&#x2F;unicode.html)了解到的，我直接说结论吧。
+
+js 使用的其实是&#96;UCS-2&#96;编码，由于这种编码被整合进了&#96;UTF-16&#96;编码，也可以认为 js 使用的是&#96;UTF-16&#96;编码处理字符。不过在细节上这两种编码还是有一些区别的：
+
+**UTF-16 编码对于基本平面的字符占用 2 个字节，对于辅助平面的字符占用 4 个字节；** 也就是说：对于”💩”，&#96;UTF-16&#96;会认为它是一个字符，占用 4 个字节。
+
+**而 UCS-2 认为所有字符都是 2 个字节**，而对于辅助平面的字符例如 💩，就比较尴尬了，UCS-2 认为它是 2 个字符（H 和 L），每个字符占 2 个字节。
+
+### [](#UTF-16-编码 &quot;UTF-16 编码&quot;)UTF-16 编码
+
+再稍微说一下&#96;UTF-16&#96;编码，知道了 H、L，理解&#96;UTF-16&#96;就很容易了。上面提到它是一种变长的编码，结果可能是 2 个字节，也可能是 4 个字节。
+
+具体来说：
+
+1. 如果是 BMP 字符，那么其代码点就是编码结果，如&#96;U+4E25 &#x3D;&gt; 0x4E25&#96;
+2. 如果是 SMP 字符，那么计算 H、L，H 和 L 拼凑起来的 4 个字节，就是最终结果，如&#96;0x1F4A9&#96;的结果就是&#96;0xD83DDCA9&#96;
+
+# [](#es5-中处理SMP字符 &quot;es5 中处理SMP字符&quot;)es5 中处理&#96;SMP字符&#96;
+
+1. **length**：💩 的&#96;length&#96;为 2 应该可以理解了，实际上它是 H、L 两个字符，可以看出&#96;length&#96;的结果并不是肉眼所看到的字符个数。
+
+2. **&#96;charCodeAt&#96;**： 如果猜测的没错，对于 💩，可以分别得出&#96;charCodeAt(0)&#96;和&#96;charCodeAt(1)&#96;，它们的结果正好就是 H 和 L：
+
+   |             |                                                                                               |
+   | ----------- | --------------------------------------------------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   2
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#39;💩&#39;.charCodeAt(0).toString(16); &#x2F;&#x2F; 0xD83D
+   &#39;💩&#39;.charCodeAt(1).toString(16); &#x2F;&#x2F; 0xDCA9
+   &#96;&#96;&#96; |
+
+3. **&#96;fromCharcode&#96;** - 只能处理位于 BMP 区间(&#96;U+0000&#96;\~&#96;U+FFFF&#96;)的&#96;BMP&#96;字符,会直接截断&#96;SMP字符&#96;的高位字节:
+
+   |             |                                                                                                     |
+   | ----------- | --------------------------------------------------------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   2
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   String.fromCharCode(0x0041); &#x2F;&#x2F; A
+   String.fromCharCode(0x1f4a9); &#x2F;&#x2F; &#39;&#39;  U+F4A9, not U+1F4A9
+   &#96;&#96;&#96; |
+
+   解决的办法是根据上面计算 &#96;H、L&#96; 的公式先计算出 &#96;H、L&#96;,然后再传入&#96;String.fromCharCode&#96;：
+
+   |           |                                                      |
+   | --------- | ---------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   String.fromCharCode(0xd83d, 0xdca9); &#x2F;&#x2F; &quot;💩&quot;
+   &#96;&#96;&#96; |
+
+4. **数量匹配&#96;SMP字符&#96;**: 匹配失败的原因是 &#96;SMP字符&#96;被打散成了 H、L
+
+   |           |                                                         |
+   | --------- | ------------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#x2F;💩&#123;2&#125;&#x2F;   &#x3D;&gt; &#x2F;\uD83D\uDCA9&#123;2&#125;&#x2F;  &#x2F;&#x2F; 其实匹配的是 H+L*2
+   &#96;&#96;&#96; |
+
+   一个可行的方案是直接采用括号包裹对应的&#96;&lt;H，L&gt;&#96;来写正则
+
+   |           |                                                   |
+   | --------- | ------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#x2F;(\uD83D\uDCA9)&#123;2&#125;&#x2F;.test(&#39;💩💩&#39;); &#x2F;&#x2F; true
+   &#96;&#96;&#96; |
+
+5. **范围匹配&#96;SMP字符&#96;**： 报错的原因也是&#96;H、L&#96;：
+
+   |           |                                                       |
+   | --------- | ----------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#x2F;[💩-💫]&#x2F;  &#x3D;&gt;   &#x2F;[\uD83D\uDCA9-\uD83D\uDCAB]&#x2F;
+   &#96;&#96;&#96; |
+
+   上面的&#96;\uDCA9-\uD83D&#96;左边的值比右边大，导致报错。一个很挫的解决方案是提供他们的 H、L 公共范围并精简表达式：
+
+   |             |                                                                                               |
+   | ----------- | --------------------------------------------------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   2
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#x2F;\uD83D[\uDCA9-\uDCAB]&#x2F;.test(&#39;💩&#39;) &#x2F;&#x2F; true
+   &#x2F;\uD83D[\uDCA9-\uDCAB]&#x2F;.test(&#39;💫&#39;) &#x2F;&#x2F; true
+   &#96;&#96;&#96; |
+
+   这种方法的缺点也很明显，对于两个跨度很大的&#96;SMP&#96;字符，需要精心的分段，稍不留神就会出错：
+
+   |                   |                                                                                                                        |
+   | ----------------- | ---------------------------------------------------------------------------------------------------------------------- |
+   | &#96;&#96;&#96;
+   1
+   2
+   3
+   4
+   5
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   &#x2F;[𐄑-💫]&#x2F;
+
+   &#x3D;&gt;
+
+   &#x2F;\uD800[\uDD11-\uDFFF]|[\uD801-\uD83C][\uDC00-\uDFFF]|\uD83D[\uDC00-\uDCAB]&#x2F;.test(&#39;💪&#39;) &#x2F;&#x2F; true
+   &#96;&#96;&#96; |
+
+6. **&#96;reverse&#96;函数**：遇到&#96;SMP字符&#96;会直接把 H、L 颠倒，而每个独立的 H、L 都是『乱码』，只有二者结合在一起才有意义。如果要解决问题，需要知道在碰到 H 的时候，下一个字符会是 L，不要把二者颠倒就行。
+
+   不过[esrever](https:&#x2F;&#x2F;github.com&#x2F;mathiasbynens&#x2F;esrever)提供了一个更巧妙的思路：先将 H、L 颠倒一次，然后再执行一次普通的 reverse 即可：
+
+   |                                       |                                                                                                                                                                                                                                                                                                                          |
+   | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | &#96;&#96;&#96;
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   11
+   12
+   13
+   &#96;&#96;&#96; | &#96;&#96;&#96;
+   const regexSurrogatePair &#x3D; &#x2F;([\uD800-\uDBFF])([\uDC00-\uDFFF])&#x2F;g;
+
+   function reverse(string) &#123;
+     const tempStr &#x3D; string.replace(regexSurrogatePair, &#39;$2$1&#39;);
+
+     return tempStr
+       .split(&#39;&#39;)
+       .reverse()
+       .join(&#39;&#39;);
+   &#125;
+
+   console.log(reverse(&#39;abcd&#39;)); &#x2F;&#x2F; dcba
+   console.log(reverse(&#39;💩万几皮&#39;)); &#x2F;&#x2F; 皮几万💩​​​​​
+   &#96;&#96;&#96; |
+
+# [](#ES6-中如何解决-Unicode-问题 &quot;ES6 中如何解决 Unicode 问题&quot;)ES6 中如何解决 Unicode 问题
+
+在 es5 中处理 SMP 字符需要时刻记住 H、L 的存在，既麻烦又容易出错。好在 es6 中新增了一系列特性来专门处理 SMP 字符，下面逐一说明。
+
+## [](#字符转义-1 &quot;字符转义&quot;)字符转义
+
+es5 中的&#96;\u&#96;字符转义不能正确处理 SMP 字符，例如 😄(&#96;U+1F604, H&#x3D;0xD83D L&#x3D;0xDE04&#96;)：
+
+|           |                                             |
+| --------- | ------------------------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#39;\u1F604&#39;; &#x2F;&#x2F; &quot;ὠ4&quot;   &#39;\u1F60&#39; + &#39;4&#39;
+&#96;&#96;&#96; |
+
+除非使用 H、L 的形式：
+
+|           |                               |
+| --------- | ----------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#39;\uD83D\uDE04&#39;; &#x2F;&#x2F; 😄
+&#96;&#96;&#96; |
+
+es6 中提供了更好的方法，使用&#96;&#123;&#125;&#96;包裹代码点即可：
+
+|           |                            |
+| --------- | -------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#39;\u&#123;1f604&#125;&#39;; &#x2F;&#x2F; 😄
+&#96;&#96;&#96; |
+
+## [](#codePointAt &quot;codePointAt&quot;)codePointAt
+
+&#96;charCodeAt&#96;只能正确获取 BMP 字符的代码点，对于 SMP 字符只能获取 H 或 L；es6 中新增的&#96;codePointAt&#96;,他能统一处理好 BMP 以及 SMP 字符：
+
+|               |                                                                                                                                                |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#39;😄&#39;.codePointAt(0).toString(16); &#x2F;&#x2F; 0x1f604
+&#39;abc&#39;.codePointAt(0).toString(16); &#x2F;&#x2F; 0x0061
+&#39;呵呵哒&#39;.codePointAt(2).toString(16); &#x2F;&#x2F; 0x54D2
+&#96;&#96;&#96; |
+
+## [](#fromCodePoint &quot;fromCodePoint&quot;)fromCodePoint
+
+同样的，&#96;fromCharcode&#96;也只能正确处理 BMP 字符； es6 新增的&#96;fromCodePoint&#96;解决了这个问题：
+
+|               |                                                                                                                    |
+| ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| &#96;&#96;&#96;
+1
+2
+3
+&#96;&#96;&#96; | &#96;&#96;&#96;
+String.fromCodePoint(0x1f604); &#x2F;&#x2F; 😄
+String.fromCodePoint(0x0061); &#x2F;&#x2F; a
+String.fromCodePoint(0x54d2); &#x2F;&#x2F; 哒
+&#96;&#96;&#96; |
+
+## [](#正则匹配-1 &quot;正则匹配&quot;)正则匹配
+
+ES6 对正则表达式添加了**&#96;u&#96;**修饰符，含义为“Unicode 模式”，用来正确处理大于&#96;U+FFFF&#96;的 SMP 字符。
+
+也就是说：我们可以直接用&#96;u&#96;修饰符加上原始的代码点或字符就能正确匹配所有的 Unicode 字符了。
+
+### [](#单字符匹配 &quot;单字符匹配&quot;)单字符匹配
+
+若没有&#96;u&#96;修饰符，即使使用 es6 中的字符转义也不能正确匹配 SMP 字符：
+
+|           |                                          |
+| --------- | ---------------------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;\u&#123;1f604&#125;&#x2F;.test(&#39;😄&#39;); &#x2F;&#x2F; false
+&#96;&#96;&#96; |
+
+由于 H、L 的存在，即使&#96;.&#96;点号也不能匹配 SMP 字符：
+
+|           |                                              |
+| --------- | -------------------------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;foo.bar&#x2F;.test(&#39;foo😄bar&#39;); &#x2F;&#x2F; false
+&#96;&#96;&#96; |
+
+使用&#96;u&#96;修饰符可以处理这个问题：
+
+|             |                                                                               |
+| ----------- | ----------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;\u&#123;1f604&#125;&#x2F;u.test(&#39;😄&#39;); &#x2F;&#x2F; true
+&#x2F;foo.bar&#x2F;u.test(&#39;foo😄bar&#39;); &#x2F;&#x2F; true
+&#96;&#96;&#96; |
+
+### [](#范围匹配-1 &quot;范围匹配&quot;)范围匹配
+
+上面已经提到过，在 es5 中 SMP 范围匹配会直接报错：
+
+|           |                                                                                                                             |
+| --------- | --------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;[💩-💫]&#x2F;; &#x2F;&#x2F; &#x2F;&#x2F; Uncaught SyntaxError: Invalid regular expression: &#x2F;[💩-💫]&#x2F;: Range out of order in character class
+&#96;&#96;&#96; |
+
+&#96;u&#96;在这里扮演了救世主：
+
+|                       |                                                                                                                                                                                                                |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+4
+5
+6
+7
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;&#x2F; 💩 0x1f4a9 &#x3D;&gt; H&#x3D;0xD83D ,L&#x3D;0xDCA9
+&#x2F;&#x2F; 💪 0x1f4aa &#x3D;&gt; H&#x3D;0xD83D ,L&#x3D;0xDCAA
+&#x2F;&#x2F; 💫 0x1f4ab &#x3D;&gt; H&#x3D;0xD83D ,L&#x3D;0xDCAB
+
+&#x2F;[💩-💫]&#x2F;u.test(&#39;💩&#39;) &#x2F;&#x2F; true
+&#x2F;[💩-💫]&#x2F;u.test(&#39;💪&#39;) &#x2F;&#x2F; true
+&#x2F;[💩-💫]&#x2F;u.test(&#39;💫&#39;) &#x2F;&#x2F; true
+&#96;&#96;&#96; |
+
+直接使用 H、L 的形式来写正则也不会报错了：
+
+|               |                                                                                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;[\uD83D\uDCA9-\uD83D\uDCAB]&#x2F;u.test(&#39;💩&#39;) &#x2F;&#x2F; true
+&#x2F;[\uD83D\uDCA9-\uD83D\uDCAB]&#x2F;u.test(&#39;💪&#39;) &#x2F;&#x2F; true
+&#x2F;[\uD83D\uDCA9-\uD83D\uDCAB]&#x2F;u.test(&#39;💫&#39;) &#x2F;&#x2F; true
+&#96;&#96;&#96; |
+
+### [](#数量匹配-1 &quot;数量匹配&quot;)数量匹配
+
+复习一下 es5 在数量匹配 SMP 时的问题：
+
+|           |                                        |
+| --------- | -------------------------------------- |
+| &#96;&#96;&#96;
+1
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;😄&#123;2&#125;&#x2F;.test(&#39;😄😄&#39;); &#x2F;&#x2F; false
+&#96;&#96;&#96; |
+
+继续看看&#96;u&#96;的作用：
+
+|               |                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&#x2F;😄&#123;2&#125;&#x2F;u.test(&#39;😄😄&#39;) &#x2F;&#x2F; true
+&#x2F;\u&#123;1f604&#125;&#123;2&#125;&#x2F;u.test(&#39;😄😄&#39;) &#x2F;&#x2F; true
+&#x2F;\uD83D\uDE04&#123;2&#125;&#x2F;u.test(&#39;😄😄&#39;) &#x2F;&#x2F; true ， 注意这里没有使用括号
+&#96;&#96;&#96; |
+
+## [](#表单校验中的-pattern &quot;表单校验中的 pattern&quot;)表单校验中的 pattern
+
+在表单校验中，&#96;input&#96;元素有一个规则属性是&#96;pattern&#96;，可以给它设置一个正则表达式，若表单项的值匹配了&#96;pattern&#96;，会默认添加一个&#96;valid&#96;的伪类，反之添加&#96;invalid&#96;伪类。
+
+|                         |                                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------ |
+| &#96;&#96;&#96;
+1
+2
+3
+4
+5
+6
+7
+8
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&lt;style&gt;
+  :invalid &#123;
+    color: red;
+  &#125;
+  :valid &#123;
+    color: green;
+  &#125;
+&lt;&#x2F;style&gt;
+&#96;&#96;&#96; |
+
+|                     |                                                                                                                                                                            |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+4
+5
+6
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&lt;form action&#x3D;&quot;&quot;&gt;
+  &lt;input type&#x3D;&quot;text&quot; pattern&#x3D;&quot;\d+&quot; value&#x3D;&quot;123&quot; &#x2F;&gt;
+  &lt;!-- 界面上显示绿色 --&gt;
+  &lt;input type&#x3D;&quot;text&quot; pattern&#x3D;&quot;\d+&quot; value&#x3D;&quot;abc&quot; &#x2F;&gt;
+  &lt;!-- 界面上显示红色 --&gt;
+&lt;&#x2F;form&gt;
+&#96;&#96;&#96; |
+
+幸运的是，不需要我们做什么 hack 操作，&#96;u&#96;修饰符已经默认附加在了 pattern 上：
+
+|                     |                                                                                                                                                                                         |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+4
+5
+6
+&#96;&#96;&#96; | &#96;&#96;&#96;
+&lt;form action&#x3D;&quot;&quot; class&#x3D;&quot;form&quot;&gt;
+  &lt;input type&#x3D;&quot;text&quot; pattern&#x3D;&quot;😄&#123;2&#125;&quot; value&#x3D;&quot;😄😄&quot; &#x2F;&gt;
+  &lt;!-- green --&gt;
+  &lt;input type&#x3D;&quot;text&quot; pattern&#x3D;&quot;💩-💫&quot; value&#x3D;&quot;💫&quot; &#x2F;&gt;
+  &lt;!-- green --&gt;
+&lt;&#x2F;form&gt;
+&#96;&#96;&#96; |
+
+## [](#兼容性 &quot;兼容性&quot;)兼容性
+
+&#96;u&#96;修饰符的兼容性参考[test-RegExp\_y\_and\_u\_flags](http:&#x2F;&#x2F;kangax.github.io&#x2F;compat-table&#x2F;es6&#x2F;#test-RegExp_y_and_u_flags)
+
+[![](https:&#x2F;&#x2F;hellogithub2014.github.io&#x2F;images&#x2F;Unicode&#x2F;u-flag-compatiable.png)](https:&#x2F;&#x2F;hellogithub2014.github.io&#x2F;images&#x2F;Unicode&#x2F;u-flag-compatiable.png)
+
+## [](#Array-from &quot;Array.from&quot;)Array.from
+
+可能有时候需要计算字符串中的『字数』(即肉眼见到的字符数)，例如界面提示用户输入了多少字。如上所述，这个时候不能简单的使用&#96;length&#96;属性，因为对于一个&#96;SMP&#96;字符它会返回 2.
+
+在 es5 中我们可以这么做：
+
+|                         |                                                                                                                                                                                                                            |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+4
+5
+6
+7
+8
+&#96;&#96;&#96; | &#96;&#96;&#96;
+var regexSMP &#x3D; &#x2F;[\uD800-\uDBFF][\uDC00-\uDFFF]&#x2F;g;
+
+&#x2F;&#x2F; 将每个SMP字符转换成一个BMP字符，然后直接计算最终结果的length即可。
+function countSymbols(string) &#123;
+  return string.replace(regexSMP, &#39;_&#39;).length;
+&#125;
+
+countSymbols(&#39;😄你好阿，test©&#39;); &#x2F;&#x2F; 10
+&#96;&#96;&#96; |
+
+es6 中借助&#96;Array.from&#96;或者扩散运算符&#96;...&#96;可以更简便，他会帮助我们处理好 Unicode 字符：
+
+|                                 |                                                                                                                                                                                                                           |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+&#96;&#96;&#96; | &#96;&#96;&#96;
+function countSymbols2(string) &#123;
+  return Array.from(string).length;
+&#125;
+
+countSymbols2(&#39;😄你好阿，test©&#39;); &#x2F;&#x2F; 10
+
+function countSymbols3(string) &#123;
+  return [...string].length;
+&#125;
+
+countSymbols3(&#39;😄你好阿，test©&#39;); &#x2F;&#x2F; 10
+&#96;&#96;&#96; |
+
+同样&#96;reverse&#96;函数也能用&#96;Array.from&#96;：
+
+|                     |                                                                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| &#96;&#96;&#96;
+1
+2
+3
+4
+5
+6
+&#96;&#96;&#96; | &#96;&#96;&#96;
+function reverse2(string) &#123;
+  return Array.from(string)
+    .reverse()
+    .join(&#39;&#39;);
+&#125;
+reverse2(&#39;😄你好阿，test©&#39;); &#x2F;&#x2F; &quot;©tset，阿好你😄&quot;
+&#96;&#96;&#96; |
+
+
+# [](#参考 &quot;参考&quot;)参考
+
+1. [javascript-unicode](https:&#x2F;&#x2F;mathiasbynens.be&#x2F;notes&#x2F;javascript-unicode)
+2. [谈谈 Unicode 编码](http:&#x2F;&#x2F;pcedu.pconline.com.cn&#x2F;empolder&#x2F;gj&#x2F;other&#x2F;0505&#x2F;616631_all.html#content_page_1)
+3. [Unicode 与 JavaScript 详解](http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;blog&#x2F;2014&#x2F;12&#x2F;unicode.html)
+4. [wiki unicode](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Unicode)
+5. [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets](https:&#x2F;&#x2F;www.joelonsoftware.com&#x2F;2003&#x2F;10&#x2F;08&#x2F;the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses&#x2F;)
+6. [Unicode-aware regular expressions in ES2015](https:&#x2F;&#x2F;mathiasbynens.be&#x2F;notes&#x2F;es6-unicode-regex)
+7. [es6 字符串的扩展](http:&#x2F;&#x2F;es6.ruanyifeng.com&#x2F;#docs&#x2F;string)
+8. [es6 正则的扩展](http:&#x2F;&#x2F;es6.ruanyifeng.com&#x2F;#docs&#x2F;regex)
+9. [ASCII，Unicode 和 UTF-8](http:&#x2F;&#x2F;www.ruanyifeng.com&#x2F;blog&#x2F;2007&#x2F;10&#x2F;ascii_unicode_and_utf-8.html)
+
+
+
+
+
+
+# 为什么有些字符的 length 不是 1？谈谈 JavaScript 中的字符串编码
+
+原文：https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7084062127677243428
+
+## 由 String.fromCodePoint 与 String.fromCharCode 谈起
+
+&#96;String.fromCodePoint&#96; 与 &#96;String.fromCharCode&#96; 这两个方法名称相似。如果你之前未使用过，让我们来先看 MDN 上的介绍。
+
+&gt; [String.fromCodePoint](https:&#x2F;&#x2F;link.juejin.cn?target&#x3D;https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FString%2FfromCodePoint &quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;JavaScript&#x2F;Reference&#x2F;Global_Objects&#x2F;String&#x2F;fromCodePoint&quot;)
+&gt;
+&gt; String.fromCodePoint() 静态方法返回使用指定的代码点序列创建的字符串。
+
+&gt; [String.fromCodePoint](https:&#x2F;&#x2F;link.juejin.cn?target&#x3D;https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FString%2FfromCharCode &quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;JavaScript&#x2F;Reference&#x2F;Global_Objects&#x2F;String&#x2F;fromCharCode&quot;)
+&gt;
+&gt; 静态 String.fromCharCode() 方法返回由指定的 UTF-16 代码单元序列创建的字符串。
+
+读完以上介绍，你的困惑可能又多了一些。「代码点」，「UTF-16 代码单元序列」分别指的是什么意思？为了更好地理解这些概念，让我们从 Unicode 编码谈起。
+
+## Unicode 编码
+
+Unicode 编码给全世界上所有的字符分配了唯一的数字编号，即 code point（下文统一称代码点）。Unicode 字符共计 110 多万，一个 unsigned int32 来表示完全够了。
+
+| 字符 | 代码点    |
+| -- | ------ |
+| a  | 97     |
+| 金  | 37329  |
+| 😝 | 128541 |
+
+通过调用字符串的 &#96;codePointAt&#96; 方法可以获取指定位置字符的代码点，调用 &#96;String.fromCodePoint&#96; 可以将代码点转为字符，&#96;codePointAt&#96; 与 &#96;fromCodePoint&#96; 可以归为一类。
+
+&#96;&#96;&#96;js
+js
+复制代码
+&quot;😝&quot;.codePointAt(0); &#x2F;&#x2F; 128541
+
+String.fromCodePoint(128541); &#x2F;&#x2F; &#39;😝&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="UTF-8-与-UTF-16"><a href="#UTF-8-与-UTF-16" class="headerlink" title="UTF-8 与 UTF-16"></a>UTF-8 与 UTF-16</h3><p>Unicode 编码只是定义了代码点，但并未规定二进制数据存储的格式。用四个字节来存储最方便，但是过于浪费存储空间。实践中，往往采用变长编码，比如 UTF-8 与 UTF-16 格式来存储数据。</p>
+<p>UTF-8 编码占用字节数 1 - 4，UTF-16 编码占用字节数为 2 或者 4。借助 Node 中的 <code>Buffer</code> 对象可以观察字符对应二进制数据。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">js
+复制代码
+Buffer<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">"😝"</span><span class="token punctuation">,</span> <span class="token string">"utf8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [0xf0, 0x9f, 0x98, 0x9d]</span>
+
+Buffer<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">"😝"</span><span class="token punctuation">,</span> <span class="token string">"utf16le"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [0x3d, 0xd8, 0x1d, 0xde]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="JavaScript-字符的缺陷"><a href="#JavaScript-字符的缺陷" class="headerlink" title="JavaScript 字符的缺陷"></a>JavaScript 字符的缺陷</h2><p>JavaScript 虽然遵循 Unicode 编码，但采用的是废弃的 UCS-2 编码格式。该方案的缺陷是对于 4 个<strong>字节</strong>的字符，比如 emoji 表情，会拆分 2 个<strong>字符</strong>，即 2 个 UTF-16 字符。获取字符的长度与调用 <code>charCodeAt</code> 方法可看出这一点。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">js
+复制代码
+<span class="token string">"😝"</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token comment">// 2</span>
+
+<span class="token string">"😝"</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ['\uD83D', '\uDE1D']</span>
+
+<span class="token string">"😝"</span><span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 55357 === 0xD83D</span>
+<span class="token string">"😝"</span><span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 56861 === 0xDE1D</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>将编码数转成 16 进制数，加上 <code>\u</code> 也可用以表示该字符。使用 <code>String.fromCharCode</code> 可以将单元序列转成字符。<code>fromCharCode</code> 与 <code>charCodeAt</code> 可以归为一组。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">js
+复制代码
+String<span class="token punctuation">.</span><span class="token function">fromCharCode</span><span class="token punctuation">(</span><span class="token number">55357</span><span class="token punctuation">,</span> <span class="token number">56861</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '😝'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>经过上面的介绍，我们发现对于由一个 UTF-16 代码单元构成的字符，<code>charCodeAt</code> 与 <code>codePointAt</code> 的结果一致。</p>
+<h2 id="ES6-的改进"><a href="#ES6-的改进" class="headerlink" title="ES6 的改进"></a>ES6 的改进</h2><p>日常开发中，字符串的操作是如此常见。我们想用更好的方式来处理字符串。好在 ES6 改进了字符串的操作。使用 <code>for...of</code> 来遍历字符串，使用 <code>Array.from</code> 来准确的计算字符串长度。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">js
+复制代码
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> ch <span class="token keyword">of</span> <span class="token string">"😝"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">"😝"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>对于 4 字节的字符，也支持了 Unicode 码表示。「😝」的这几种写法是等效。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">js
+复制代码
+<span class="token string">"😝"</span> <span class="token operator">===</span> <span class="token string">"\uD83D\uDE1D"</span><span class="token punctuation">;</span>
+<span class="token string">"😝"</span> <span class="token operator">===</span> <span class="token string">"\u&#123;1F61D&#125;"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Buffer-与字符串的转换"><a href="#Buffer-与字符串的转换" class="headerlink" title="Buffer 与字符串的转换"></a>Buffer 与字符串的转换</h2><p>前文中提到，字符在存储占据的空间是不一样的。在 Buffer 拼接时，尤其要注意避免隐式地调用 <code>toString</code>。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">js
+复制代码
+<span class="token keyword">const</span> buf <span class="token operator">=</span> Buffer<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token string">"😝"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 4 字节</span>
+
+buf<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> buf<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '���'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上述代码片段的结果跟预期完全不一致。在调用 <code>toString</code> 时，Buffer 并不完整，错误地被转化成 <a href="https://link.juejin.cn/?target=https://www.fileformat.info/info/unicode/char/fffd/index.htm" title="https://www.fileformat.info/info/unicode/char/fffd/index.htm"><strong>� (Unicode replacement character)</strong></a>。正确的方式使用 <code>Buffer.concat</code> 或者 <code>StringDecoder</code> 来去实现拼接。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">js
+复制代码
+<span class="token comment">// 1</span>
+Buffer<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">[</span>buf<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> buf<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2</span>
+<span class="token keyword">const</span> <span class="token punctuation">&#123;</span> StringDecoder <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"string_decoder"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> decoder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringDecoder</span><span class="token punctuation">(</span><span class="token string">"utf8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+decoder<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buf<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+decoder<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span>buf<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '😝'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>原文：<a target="_blank" rel="noopener" href="https://hellogithub2014.github.io/2018/08/23/unicode-and-javascript/">https://hellogithub2014.github.io/2018/08/23/unicode-and-javascript/</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li><p><code>String.fromCodePoint</code> 与 <code>codePointAt</code> 归为一组，处理的是 Unicode 编码中的代码点。</p>
+</li>
+<li><p><code>String.fromCharCode</code> 与 <code>charCodeAt</code> 归为一组，处理的是 UTF-16 代码单元序列。部分字符由两个 UTF-16 代码单元序列构成。</p>
+</li>
+<li><p>尽量使用 ES6 的新方法来处理字符串。</p>
+</li>
+<li><p>Buffer 与字符串转化时，需要注意保证 Buffer 的完整性。</p>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://link.juejin.cn/?target=https://es6.ruanyifeng.com/%23docs/string" title="https://es6.ruanyifeng.com/#docs/string">字符串的扩展</a></li>
+<li><a href="https://link.juejin.cn/?target=https://nodejs.org/dist/latest-v14.x/docs/api/buffer.html%23buffer_buffers_and_character_encodings" title="https://nodejs.org/dist/latest-v14.x/docs/api/buffer.html#buffer_buffers_and_character_encodings">Node 中的 Buffer 对象</a></li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Alan Work</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://5soros.github.io/2024/10/22/unicode-yu-javascript/">https://5soros.github.io/2024/10/22/unicode-yu-javascript/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Alan Work</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/JS/">
+                                    <span class="chip bg-color">JS</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/10/22/unicode-yu-javascript/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="unicode-and-javascript/">
+                        
+                        <span class="card-title">unicode-and-javascript/</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-10-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/04/25/ru-he-pan-duan-yuan-su-shi-fou-zai-ke-shi-qu-yu-nei/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="如何判断元素是否在可视区域内">
+                        
+                        <span class="card-title">如何判断元素是否在可视区域内</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023-2024</span>
+            
+            <span id="year">2023</span>
+            <a href="/about" target="_blank">Alan Work</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">269.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2023";
+                    var startMonth = "10";
+                    var startDate = "14";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

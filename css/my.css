@@ -1,0 +1,4 @@
+/* Here is your custom css styles. */
+.prismjs .line-numbers .line-numbers-rows {
+  text-shadow: none; /* 移除文字阴影 */
+}
