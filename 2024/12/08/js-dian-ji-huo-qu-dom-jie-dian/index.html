@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Javascript 数组常用方法, 前端 JS HTML CSS Linux">
+    <meta name="keywords" content="JS点击获取DOM节点, 前端 JS HTML CSS Linux">
     <meta name="description" content="Looking up cases and codes occasionally is convenient, as it allows you to document your experiences and knowledge, enabling you to share and teach others. This process is akin to reviewing the knowledge and acquiring a more profound comprehension of it">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Javascript 数组常用方法 | Alan Work&#39;s Notes</title>
+    <title>JS点击获取DOM节点 | Alan Work&#39;s Notes</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Javascript 数组常用方法</h1>
+                    <h1 class="description center-align post-title">JS点击获取DOM节点</h1>
                 </div>
             </div>
         </div>
@@ -431,23 +431,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JS/">
-                                <span class="chip bg-color">JS</span>
+                            <a href="/tags/js/">
+                                <span class="chip bg-color">js</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -456,28 +447,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-17
+                    2024-12-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-17
+                    2024-12-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    424
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    2 分
                 </div>
                 
 
@@ -500,171 +491,145 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Javascript-数组常用方法"><a href="#Javascript-数组常用方法" class="headerlink" title="Javascript 数组常用方法"></a>Javascript 数组常用方法</h1><h1 id="返回新数组，不改变原数组"><a href="#返回新数组，不改变原数组" class="headerlink" title="返回新数组，不改变原数组"></a>返回新数组，不改变原数组</h1><h2 id="join"><a href="#join" class="headerlink" title="join"></a>join</h2><p>把数组中所有元素放入一个字符串中，返回字符串。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;join.js
-const arr &#x3D; [&#39;pr&#39;, &#39;is&#39;, 18];
+                <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>style<span class="token operator">></span>
+	@<span class="token keyword">import</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-console.log(arr.join(&#39; &#39;)); &#x2F;&#x2F; pr is 18
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ &#39;pr&#39;, &#39;is&#39;, 18 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+	<span class="token operator">*</span> <span class="token punctuation">&#123;</span>
+		<span class="token literal-property property">margin</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token literal-property property">padding</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		box<span class="token operator">-</span>sizing<span class="token operator">:</span> border<span class="token operator">-</span>box<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-<h2 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h2><p>连接多个（含两个）数组，两边的原始数组都不会变化，返回被连接数组的一个副本，可继续 <code>concat</code>。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;concat.js
-const arr &#x3D; [1, 2, 3, 4];
-const arr1 &#x3D; [&#39;pr&#39;, &#39;is&#39;, &#39;a&#39;, &#39;boy&#39;];
-const arr2 &#x3D; [5, 6, 7];
+	body <span class="token punctuation">&#123;</span>
+		<span class="token literal-property property">height</span><span class="token operator">:</span> 100vh<span class="token punctuation">;</span>
+		<span class="token literal-property property">display</span><span class="token operator">:</span> flex<span class="token punctuation">;</span>
+		flex<span class="token operator">-</span>direction<span class="token operator">:</span> column<span class="token punctuation">;</span>
+		justify<span class="token operator">-</span>content<span class="token operator">:</span> center<span class="token punctuation">;</span>
+		align<span class="token operator">-</span>items<span class="token operator">:</span> center<span class="token punctuation">;</span>
+		<span class="token literal-property property">color</span><span class="token operator">:</span> #<span class="token number">303030</span><span class="token punctuation">;</span>
+		<span class="token literal-property property">background</span><span class="token operator">:</span> #f0f0f0<span class="token punctuation">;</span>
+		font<span class="token operator">-</span>family<span class="token operator">:</span> <span class="token string">"Montserrat"</span><span class="token punctuation">,</span> sans<span class="token operator">-</span>serif<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-console.log(arr.concat(arr1, arr2).concat(8, 9)); &#x2F;&#x2F; [1, 2, 3, 4, &#39;pr&#39;, &#39;is&#39;, &#39;a&#39;, &#39;boy&#39;, 5, 6, 7, 8, 9 ]
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+	<span class="token punctuation">.</span>selector <span class="token punctuation">&#123;</span>
+		margin<span class="token operator">-</span>bottom<span class="token operator">:</span> 30px<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-<h2 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h2><p>从开始到结束（<code>[)</code>左闭右开，即不包括结束）选择数组的一部分<strong>浅拷贝</strong>到一个新数组。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;slice.js
-const arr &#x3D; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+	article <span class="token punctuation">&#123;</span>
+		<span class="token literal-property property">width</span><span class="token operator">:</span> 250px<span class="token punctuation">;</span>
+		<span class="token literal-property property">background</span><span class="token operator">:</span> #fefefe<span class="token punctuation">;</span>
+		border<span class="token operator">-</span>radius<span class="token operator">:</span> 5px<span class="token punctuation">;</span>
+		<span class="token literal-property property">overflow</span><span class="token operator">:</span> hidden<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-console.log(arr.slice(1, 5)); &#x2F;&#x2F; [ 1, 2, 3, 4 ]
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 0,1,2,3,4,5,6,7,8,9 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+	<span class="token punctuation">.</span>figure <span class="token punctuation">&#123;</span>
+		<span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+		<span class="token literal-property property">height</span><span class="token operator">:</span> 150px<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-<p><code>slice(1, 5)</code> 可见里面最多含 4（<code>5 - 1</code>） 个元素，而且从第 1 位开始取。</p>
-<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>创建一个新数组并返回，新数组的每个元素由原数组中的每一个元素执行提供的函数而来，其中原始数组不会发生改变。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;map.js
-const arr &#x3D; [1, 2, 3, 4];
+	<span class="token punctuation">.</span>figure img <span class="token punctuation">&#123;</span>
+		<span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+		<span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+		object<span class="token operator">-</span>fit<span class="token operator">:</span> cover<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-console.log(arr.map(i &#x3D;&gt; i * 10 - 5)); &#x2F;&#x2F; [ 5, 15, 25, 35 ]
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+	<span class="token punctuation">.</span>article<span class="token operator">-</span>body <span class="token punctuation">&#123;</span>
+		<span class="token literal-property property">padding</span><span class="token operator">:</span> 15px<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-<h2 id="every"><a href="#every" class="headerlink" title="every"></a>every</h2><p>检测数组所有元素是否都符合指定条件.</p>
-<ul>
-<li>如果数组中检测到有一个元素不满足，则整个表达式返回 <code>false</code>，且剩余的元素不会再进行检测；</li>
-<li>如果所有元素都满足条件，则返回 <code>true</code>；</li>
-</ul>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;every.js
-const arr &#x3D; [1, 2, 3, 4];
+	<span class="token punctuation">.</span>article<span class="token operator">-</span>title <span class="token punctuation">&#123;</span>
+		text<span class="token operator">-</span>transform<span class="token operator">:</span> uppercase<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-console.log(arr.every(i &#x3D;&gt; i &gt; 2)); &#x2F;&#x2F; false
-console.log(arr.every(i &#x3D;&gt; i &gt; 0)); &#x2F;&#x2F; true
-console.log([].every(i &#x3D;&gt; i &#x3D;&#x3D;&#x3D; &#39;pr&#39;)); &#x2F;&#x2F; true
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+	<span class="token punctuation">.</span>article<span class="token operator">-</span>text <span class="token punctuation">&#123;</span>
+		<span class="token literal-property property">margin</span><span class="token operator">:</span> 15px <span class="token number">0</span> 30px<span class="token punctuation">;</span>
+		font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">.</span>85rem<span class="token punctuation">;</span>
+		line<span class="token operator">-</span>height<span class="token operator">:</span> <span class="token number">1.5</span><span class="token punctuation">;</span>
+		letter<span class="token operator">-</span>spacing<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">.</span>25px<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-<h2 id="some"><a href="#some" class="headerlink" title="some"></a>some</h2><p>用于检测数组中的元素是否满足指定条件。</p>
-<ul>
-<li>如果有一个元素满足条件，则表达式返回 <code>true</code>, 剩余的元素不会再执行检测;</li>
-<li>如果没有满足条件的元素，则返回 <code>false</code>;</li>
-</ul>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;some.js
-const arr &#x3D; [1, 2, 3, 4];
+	button <span class="token punctuation">&#123;</span>
+		<span class="token literal-property property">appearance</span><span class="token operator">:</span> none<span class="token punctuation">;</span>
+		<span class="token literal-property property">outline</span><span class="token operator">:</span> none<span class="token punctuation">;</span>
+		<span class="token literal-property property">border</span><span class="token operator">:</span> none<span class="token punctuation">;</span>
+		<span class="token literal-property property">padding</span><span class="token operator">:</span> 8px 12px<span class="token punctuation">;</span>
+		<span class="token literal-property property">background</span><span class="token operator">:</span> blueviolet<span class="token punctuation">;</span>
+		<span class="token literal-property property">color</span><span class="token operator">:</span> #fefefe<span class="token punctuation">;</span>
+		font<span class="token operator">-</span>family<span class="token operator">:</span> <span class="token string">"Montserrat"</span><span class="token punctuation">,</span> sans<span class="token operator">-</span>serif<span class="token punctuation">;</span>
+		font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">.</span>75rem<span class="token punctuation">;</span>
+		font<span class="token operator">-</span>weight<span class="token operator">:</span> <span class="token number">500</span><span class="token punctuation">;</span>
+		text<span class="token operator">-</span>transform<span class="token operator">:</span> uppercase<span class="token punctuation">;</span>
+		letter<span class="token operator">-</span>spacing<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">.</span>3px<span class="token punctuation">;</span>
+		border<span class="token operator">-</span>radius<span class="token operator">:</span> 3px<span class="token punctuation">;</span>
+		<span class="token literal-property property">cursor</span><span class="token operator">:</span> pointer<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"selector"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-console.log(arr.some(i &#x3D;&gt; i &gt; 4)); &#x2F;&#x2F; false
-console.log(arr.some(i &#x3D;&gt; i &gt; 0)); &#x2F;&#x2F; true
-console.log([].some(i &#x3D;&gt; i &#x3D;&#x3D;&#x3D; &#39;pr&#39;)); &#x2F;&#x2F; false
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&lt;</span>article<span class="token operator">></span>
+	<span class="token operator">&lt;</span>figure <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"figure"</span><span class="token operator">></span>
+		<span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"https://images.unsplash.com/photo-1547082299-de196ea013d6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGNvbXB1dGVyfGVufDB8fDB8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"</span>
+			alt<span class="token operator">=</span><span class="token string">"Article-Image"</span><span class="token operator">></span>
+		<span class="token operator">&lt;</span>figcaption <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"figure-caption"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>figcaption<span class="token operator">></span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>figure<span class="token operator">></span>
+	<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"article-body"</span><span class="token operator">></span>
+		<span class="token operator">&lt;</span>h2 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"article-title"</span><span class="token operator">></span><span class="token constant">TITLE</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+		<span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"article-text"</span><span class="token operator">></span>Lorem ipsum dolor sit amet consectetur adipisicing elit<span class="token punctuation">.</span> Iure nemo incidunt<span class="token punctuation">,</span> similique
+			blanditiis <span class="token keyword">in</span> quidem<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+		<span class="token operator">&lt;</span>button <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn"</span> type<span class="token operator">=</span><span class="token string">"button"</span><span class="token operator">></span><span class="token constant">READ</span> <span class="token constant">MORE</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>article<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+	<span class="token keyword">function</span> <span class="token function">generateSelector</span><span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">let</span> index<span class="token punctuation">,</span> pathSelector<span class="token punctuation">,</span> localName<span class="token punctuation">;</span>
 
-<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p>创建一个新的数组，新数组中的元素是通过检查符合条件的所有元素。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;filter.js
-const arr &#x3D; [1, 2, 3, 4];
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>context <span class="token operator">==</span> <span class="token string">"null"</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token string">"not an dom reference"</span><span class="token punctuation">;</span>
+		<span class="token comment">// call getIndex function</span>
+		index <span class="token operator">=</span> <span class="token function">getIndex</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-console.log(arr.filter(i &#x3D;&gt; i &gt; 2)); &#x2F;&#x2F; [3, 4]
-console.log([].filter(i &#x3D;&gt; i &#x3D;&#x3D;&#x3D; &#39;pr&#39;)); &#x2F;&#x2F; []
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span>context<span class="token punctuation">.</span>tagName<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token comment">// selector path</span>
+			pathSelector <span class="token operator">=</span> context<span class="token punctuation">.</span>localName <span class="token operator">+</span> <span class="token punctuation">(</span>pathSelector <span class="token operator">?</span> <span class="token string">">"</span> <span class="token operator">+</span> pathSelector <span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			context <span class="token operator">=</span> context<span class="token punctuation">.</span>parentNode<span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token comment">// selector path for nth of type</span>
+		pathSelector <span class="token operator">=</span> pathSelector <span class="token operator">+</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">:nth-of-type(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>index<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> pathSelector<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-<h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><p>用于调用数组的每个元素，并将元素传递给回调函数，返回 <code>undefiend</code>。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;forEach.js
-const arr &#x3D; [1, 2, 3, 4];
-const copy &#x3D; [];
+	<span class="token comment">// get index for nth of type element</span>
+	<span class="token keyword">function</span> <span class="token function">getIndex</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">let</span> tagName <span class="token operator">=</span> node<span class="token punctuation">.</span>tagName<span class="token punctuation">;</span>
 
-console.log(arr.forEach(i &#x3D;&gt; &#123;
-    copy.push(i * 2);
-&#125;));
-console.log(copy); &#x2F;&#x2F; [ 2, 4, 6, 8 ]
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>previousSibling<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			node <span class="token operator">=</span> node<span class="token punctuation">.</span>previousSibling<span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>
+				node<span class="token punctuation">.</span>nodeType <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span>
+				tagName<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> node<span class="token punctuation">.</span>tagName<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+			<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				i<span class="token operator">++</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">return</span> i<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-<h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h2><p>接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。若是空数组是不会执行回调函数的;</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;reduce.js
-const arr &#x3D; [1, 2, 3, 4];
+	<span class="token comment">// load document</span>
+	document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+		<span class="token comment">// click on element to get output</span>
+		document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">let</span> selector <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".selector"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">// selector output</span>
+			<span class="token keyword">let</span> output <span class="token operator">=</span> <span class="token function">generateSelector</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-console.log(arr.reduce((prev, cur) &#x3D;&gt; prev + cur, 0)); &#x2F;&#x2F; 10
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+			selector<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;strong>Selector:&lt;/strong> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>output<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 
-<h1 id="返回新数组，改变原数组"><a href="#返回新数组，改变原数组" class="headerlink" title="返回新数组，改变原数组"></a>返回新数组，改变原数组</h1><h2 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h2><p>删除数组的最后一个元素，并返回这个元素（即被删除的元素）。</p>
-<ul>
-<li>如果数组为空，则不改变数组，返 <code>undefined</code>；</li>
-</ul>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;pop.js
-const arr &#x3D; [1, 2, 3, 4];
-const arr1 &#x3D; [];
-
-console.log(arr.pop()); &#x2F;&#x2F; 4
-console.log(arr1.pop()); &#x2F;&#x2F; undefined
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3 ]
-console.log(arr1); &#x2F;&#x2F; []<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="push"><a href="#push" class="headerlink" title="push"></a>push</h2><p>将一个或多个元素添加到数组的末尾，返回值是<strong>改变后的数组的长度</strong>。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;push.js
-const arr &#x3D; [1, 2, 3, 4];
-
-console.log(arr.push(5)); &#x2F;&#x2F; 5
-console.log(arr.push([1, 2])); &#x2F;&#x2F; 6
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 2, 3, 4, 5, [ 1, 2 ] ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="shift"><a href="#shift" class="headerlink" title="shift"></a>shift</h2><p>删除数组的第一个元素，并返回这个元素。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;shift.js
-const arr &#x3D; [1, 2, 3, 4];
-
-console.log(arr.shift()); &#x2F;&#x2F; 1
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="unshift"><a href="#unshift" class="headerlink" title="unshift"></a>unshift</h2><p>将一个或多个元素添加到数组的开头，返回值是<strong>改变后的数组的长度</strong>。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;unshift.js
-const arr &#x3D; [1, 2, 3, 4];
-
-console.log(arr.unshift(5, 6)); &#x2F;&#x2F; 6
-console.log(arr.unshift([1, 2])); &#x2F;&#x2F; 7
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ [ 1, 2 ], 5, 6, 1, 2, 3, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h2><p>颠倒数组中元素的位置，返回该数组的引用。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;reverse.js
-const arr &#x3D; [1, 2, 3, 4];
-const hello &#x3D; &#39;hello&#39;;
-const helloArray &#x3D; hello.split(&#39;&#39;);
-
-console.log(helloArray.reverse().join(&#39;&#39;)); &#x2F;&#x2F; olleh
-console.log(arr.reverse()); &#x2F;&#x2F; [ 4, 3, 2, 1 ]
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 4, 3, 2, 1 ]
-console.log(helloArray); &#x2F;&#x2F; [ &#39;o&#39;, &#39;l&#39;, &#39;l&#39;, &#39;e&#39;, &#39;h&#39; ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p>对数组的元素进行排序，并返回数组。排序不一定是稳定的。默认排序顺序是根据字符串 Unicode 码点。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;sort.js
-const arr &#x3D; [1, 2, 3, 4, 10, 12, 22];
-
-console.log(arr.sort()); &#x2F;&#x2F; [ 1, 10, 12, 2, 22, 3, 4];
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 2, 22, 3, 4];<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h2><p>向数组中添加&#x2F;删除项目，然后返回被删除项目。</p>
-<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; 0.0.2&#x2F;splice.js
-const arr &#x3D; [1, 2, 3, 4];
-
-console.log(arr.splice(1, 2, 10, 12)); &#x2F;&#x2F; [ 2, 3 ]
-console.log(&#39;&#x3D;&gt;&#39;);
-console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 4 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<h1 id="你可以…"><a href="#你可以…" class="headerlink" title="你可以…"></a>你可以…</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903897723568141">Javascript 数组常用算法</a></li>
-</ul>
-
+			<span class="token comment">// element that you select</span>
+			<span class="token keyword">let</span> element <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Selected Element:"</span><span class="token punctuation">,</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -690,7 +655,7 @@ console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 4 ]<span aria-hidden="true" class="l
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://5soros.github.io/2023/12/17/javascript-shu-zu-chang-yong-fang-fa/">https://5soros.github.io/2023/12/17/javascript-shu-zu-chang-yong-fang-fa/</a>
+                    <a href="https://5soros.github.io/2024/12/08/js-dian-ji-huo-qu-dom-jie-dian/">https://5soros.github.io/2024/12/08/js-dian-ji-huo-qu-dom-jie-dian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -728,8 +693,8 @@ console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 4 ]<span aria-hidden="true" class="l
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
+                                <a href="/tags/js/">
+                                    <span class="chip bg-color">js</span>
                                 </a>
                             
                         </div>
@@ -899,17 +864,18 @@ console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 4 ]<span aria-hidden="true" class="l
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/12/17/duo-chong-yang-shi-de-hr-hua-yang-biao-qian/">
+                <a href="/2024/12/08/js-dian-ji-huo-qu-dom-jie-dian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="多种样式的&lt;hr&gt;花样标签">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JS点击获取DOM节点">
                         
-                        <span class="card-title">多种样式的&lt;hr&gt;花样标签</span>
+                        <span class="card-title">JS点击获取DOM节点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -919,26 +885,23 @@ console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 4 ]<span aria-hidden="true" class="l
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-08
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Alan Work
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
@@ -952,13 +915,13 @@ console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 4 ]<span aria-hidden="true" class="l
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/12/17/css-ba-chong-rang-ren-yan-qian-yi-liang-de-hover-xiao-guo/">
+                <a href="/2024/11/24/hexo-chang-yong-ming-ling-xiang-jie-ji-shi-yong-fang-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="CSS八种让人眼前一亮的HOVER效果">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Hexo常用命令详解及使用方法">
                         
-                        <span class="card-title">CSS八种让人眼前一亮的HOVER效果</span>
+                        <span class="card-title">Hexo常用命令详解及使用方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -969,16 +932,12 @@ console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 4 ]<span aria-hidden="true" class="l
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-24
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Alan Work
                             
                         </span>
                     </div>
@@ -986,8 +945,8 @@ console.log(arr); &#x2F;&#x2F; [ 1, 10, 12, 4 ]<span aria-hidden="true" class="l
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
